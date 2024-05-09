@@ -1,0 +1,44 @@
+<h1>projeto</h1>
+
+<ul class="tree">
+    <li>
+        <span wm-floder>backend</span>
+        <ul>
+            <li>
+                <span wm-floder>app</span>
+                <ul>
+                    <li>usuario.js</li>
+                    <li>venda.js</li>
+                    <li>banco.js</li>
+                </ul>
+            </li>
+            <li>
+                <span wm-floder>config</span>
+                <ul>
+                    <li>server.js</li>
+                    <li>config.js</li>
+                    <li>rotas.js</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <span wm-floder>frontend</span>
+        <ul>
+            <li>app.js</li>
+            <li>app.css</li>
+            <li>app.html</li>
+        </ul>
+    </li>
+</ul>
+
+<link rel="stylesheet" href="http://files.cod3r.com.br/curso-web/tree.css">
+<script>
+    document.querySelectorAll('[wm-floder]').forEach(floder => {
+        floder.onclick = function(e) {
+            const ul = floder.nextElementSibling
+            const d = ul.style.display
+            ul.style.display = d === 'none' ? 'block' : 'none'
+        }
+    })
+</script>
